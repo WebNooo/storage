@@ -1,0 +1,133 @@
+.container{
+  height: 100vh;
+  width: 1200px;
+  background-color: #1b1d21;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header{
+  height: 70px;
+  background-color: #17191c;
+  display: flex;
+  justify-content: space-between;
+
+  &-logo{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &_link{
+      color: #4770a8;
+      font-weight: 700;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+
+  &-menu{
+    flex: 1;
+    height: 100%;
+
+    &_list{
+      list-style: none;
+      display: flex;
+      height: 100%;
+
+
+      .menu-item {
+        height: 100%;
+
+        &:not(:last-child){
+          border-right: 1px solid rgb(31, 33, 33);
+        }
+
+        &:hover{
+          background-color: rgba(255,255,255, 0.05);
+        }
+
+        &_link{
+          text-decoration: none;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0 25px;
+          color: #afbabd;
+        }
+      }
+    }
+  }
+
+  &-profile{
+    height: 100%;
+
+    &_link{
+      padding: 0 30px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+
+      &:hover{
+        background-color: rgba(255,255,255, 0.05);
+
+      }
+
+      .profile-photo{
+        width: 32px;
+        height: 32px;
+        background-color: #384573;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #292e34;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: 8px;
+  border-radius: 5px;
+}
+::-webkit-scrollbar:hover{
+  background-color: rgba(0,0,0,.15);
+}
+
+.content{
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  &_title{
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &_body{
+    flex: 1;
+    margin: 10px 5px;
+    overflow-y: auto;
+  }
+}
+
+.footer{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,119 @@
+.container {
+  height: 100vh;
+  width: 1200px;
+  background-color: #1b1d21;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  height: 70px;
+  background-color: #17191c;
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-logo_link {
+  color: #4770a8;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+.header-menu {
+  flex: 1;
+  height: 100%;
+}
+.header-menu_list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+.header-menu_list .menu-item {
+  height: 100%;
+}
+.header-menu_list .menu-item:not(:last-child) {
+  border-right: 1px solid #1f2121;
+}
+.header-menu_list .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.header-menu_list .menu-item_link {
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  color: #afbabd;
+}
+.header-profile {
+  height: 100%;
+}
+.header-profile_link {
+  padding: 0 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+.header-profile_link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.header-profile_link .profile-photo {
+  width: 32px;
+  height: 32px;
+  background-color: #384573;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #292e34;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.content_title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.content_body {
+  flex: 1;
+  margin: 10px 5px;
+  overflow-y: auto;
+}
+
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=user.css.map */
