@@ -1,36 +1,36 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const fileReducer = createSlice({
-  name: 'files',
+  name: "files",
   initialState: {
-    dropzoneActive: false,
+    dropZoneActive: false,
     files: [
       {
-        _id: '12312',
+        _id: "12312",
         parent: 111,
-        name: 'test',
+        name: "test",
         size: 351646163453,
-        type: 'txt'
+        type: "txt",
       },
       {
-        _id: '12312',
+        _id: "123121",
         parent: 111,
-        name: 'test',
+        name: "test",
         size: 351646163453,
-        type: 'txt'
-      }
-    ]
+        type: "txt",
+      },
+    ],
   },
   reducers: {
-    dropzoneState: (state, action) => {
-      state.dropzoneActive = action.payload
+    dropZoneState: (state, action) => {
+      state.dropZoneActive = action.payload;
     },
     setFiles: (state, action) => {
-      state.files = action.payload
-    }
-  }
-})
+      state.files = action.payload;
+    },
+  },
+});
 
-export const file = fileReducer.actions
+export const file = fileReducer.actions;
 
-export default fileReducer.reducer
+export default fileReducer.reducer;

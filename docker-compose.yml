@@ -1,16 +1,16 @@
 version: "3.1"
 services:
-#  client:
-#    image: node:14-alpine
-#    environment:
-#      - CHOKIDAR_USEPOLLING=true
-#    ports:
-#      - "3000:3000"
-#    volumes:
-#      - ./client:/app
-#    working_dir: /app
-#    command: tail -f /dev/null
-    #privileged: true
+  #  client:
+  #    image: node:14-alpine
+  #    environment:
+  #      - CHOKIDAR_USEPOLLING=true
+  #    ports:
+  #      - "3000:3000"
+  #    volumes:
+  #      - ./client:/app
+  #    working_dir: /app
+  #    command: tail -f /dev/null
+  #privileged: true
   mongo:
     image: mongo:4.2-bionic
     hostname: mongodb
@@ -19,17 +19,20 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: 272065
       # MONGO_REPLICA_SET_NAME: rs0
     ports:
-        - "0.0.0.0:27018:27017"
+      - "0.0.0.0:27018:27017"
     volumes:
-        - ./data/mongo:/data/db
+      - ./data/mongo:/data/db
     # command: ["--replSet", "rs0", "--bind_ip_all"]
   server:
-    image: node:14-alpine
+    image: node:latest
     depends_on:
       - mongo
+    # environment:
+    # NODE_ENV: default
     ports:
       - "8083:8083"
     volumes:
+      - ./Nooo:/Nooo
       - ./data/files:/app/files
       - ./server:/app
     working_dir: /app

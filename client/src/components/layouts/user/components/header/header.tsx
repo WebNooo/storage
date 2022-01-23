@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-export const Header: React.FC = () => {
+export const Header: React.FC = React.memo(() => {
   return (
     <header className="header">
       <div className="header-logo">
@@ -11,24 +12,24 @@ export const Header: React.FC = () => {
       <nav className="header-menu">
         <ul className="header-menu_list">
           <li className="menu-item">
-            <a href="/" className="menu-item_link">
+            <Link to="/" className="menu-item_link">
               Главная
-            </a>
+            </Link>
           </li>
 
           <li className="menu-item">
-            <a href="/" className="menu-item_link">
+            <Link to="/files" className="menu-item_link">
               Файлы
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
       <div className="header-profile">
-        <a href="/profile" className={'header-profile_link'}>
+        <Link to="/profile" className={"header-profile_link"}>
           <div className="profile-photo" />
           Nooo
-        </a>
+        </Link>
       </div>
     </header>
-  )
-}
+  );
+});

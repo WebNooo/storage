@@ -1,5 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export const Footer: React.FC = () => {
-  return <footer className="footer">(c) Nooo</footer>
-}
+export const Footer: React.FC = React.memo(() => {
+  return <footer className="footer">(c) Nooo</footer>;
+});

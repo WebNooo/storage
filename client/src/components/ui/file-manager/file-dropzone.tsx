@@ -1,17 +1,16 @@
-import React from 'react'
-import { useFileDropzone } from '../../../hooks'
+import React from "react";
+import { useFileDropZone } from "../../../hooks";
 
-export const FileDropzone: React.FC = () => {
+export const FileDropZone: React.FC = React.memo(() => {
   const {
     isDrag,
     handleDragOver,
     handleDragLeave,
     handleDrop,
-    handleDropClick
-  } = useFileDropzone()
+    handleDropClick,
+  } = useFileDropZone();
 
-  return isDrag
-    ? (
+  return isDrag ? (
     <div
       className="files-dropzone"
       onClick={handleDropClick}
@@ -21,6 +20,5 @@ export const FileDropzone: React.FC = () => {
     >
       This is drag and drop file zone
     </div>
-      )
-    : null
-}
+  ) : null;
+});

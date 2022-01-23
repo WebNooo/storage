@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guest {
+  &-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 5px;
+
+    & > .header {
+      width: 200px;
+      height: 50px;
+    }
+
+    background-color: #1b1d21;
+    min-height: 300px;
+    min-width: 250px;
+  }
+}

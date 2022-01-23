@@ -1,16 +1,16 @@
-import React from 'react'
-import '../../../assets/styles/file-manager.scss'
-import { FileRow } from './file-row'
-import { useAppSelector, useFileDropzone } from '../../../hooks'
-import { FileDropzone } from './file-dropzone'
+import React from "react";
+import "../../../assets/styles/file-manager.scss";
+import { FileRow } from "./file-row";
+import { useAppSelector, useFileDropZone } from "../../../hooks";
+import { FileDropZone } from "./file-dropzone";
 
-export const FileManager: React.FC = () => {
-  const { handleDragEnter } = useFileDropzone()
-  const files = useAppSelector((state) => state.fileReducer.files)
+export const FileManager: React.FC = React.memo(() => {
+  const { handleDragEnter } = useFileDropZone();
+  const files = useAppSelector((state) => state.fileReducer.files);
 
   return (
     <div className="files" onDragEnter={handleDragEnter}>
-      <FileDropzone />
+      <FileDropZone />
       <div className="files-header">
         <div className="files-row">
           <div className="icon" />
@@ -25,5 +25,5 @@ export const FileManager: React.FC = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+});

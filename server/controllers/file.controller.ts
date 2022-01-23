@@ -18,9 +18,9 @@ class FileController {
 
       const uploadCallback = (file: fileUpload.UploadedFile) => {
         file.mv(`${filesDir}/${file.name}`, (err: any) => {
-            if (err) return console.log(err);
+          if (err) return console.log(err);
 
-            console.log("success");
+          console.log("success");
         });
       };
 
@@ -36,7 +36,7 @@ class FileController {
 
       res.status(200).send("1");
     } catch (error: any) {
-      Core.debbug({ type: "ERROR", message: error.message, group: "FILE" });
+      Core.debug({ type: "ERROR", message: error.message, group: "FILE" });
       res.status(500).json({ success: false, message: "Server error" });
     }
   }

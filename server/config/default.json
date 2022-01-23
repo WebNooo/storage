@@ -1,0 +1,14 @@
+{
+  "server": {
+    "port": 8083,
+    "jwt_secret": "ds%$#gsev46w34&WE$SBw4aw34Vq347yuwNSBWE*&E",
+    "mongo": {
+      "username": "20167",
+      "password": "272065",
+      "uri": "mongo",
+      "port": 27017,
+      "database": "storage",
+      "authSource": "admin"
+    }
+  }
+}

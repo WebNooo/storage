@@ -1,2 +1,3 @@
-export * from './icon'
-export * from './file-manager'
+export * from "./icon";
+export * from "./form";
+export * from "./file-manager";

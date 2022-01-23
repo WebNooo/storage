@@ -1,28 +1,27 @@
-.container{
+.container {
   height: 100vh;
   width: 1200px;
   background-color: #1b1d21;
-  box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+  // box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.header{
+.header {
   height: 70px;
   background-color: #17191c;
   display: flex;
   justify-content: space-between;
 
-  &-logo{
+  &-logo {
     width: 150px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
-
-    &_link{
+    &_link {
       color: #4770a8;
       font-weight: 700;
       font-size: 20px;
@@ -30,28 +29,27 @@
     }
   }
 
-  &-menu{
+  &-menu {
     flex: 1;
     height: 100%;
 
-    &_list{
+    &_list {
       list-style: none;
       display: flex;
       height: 100%;
 
-
       .menu-item {
         height: 100%;
 
-        &:not(:last-child){
+        &:not(:last-child) {
           border-right: 1px solid rgb(31, 33, 33);
         }
 
-        &:hover{
-          background-color: rgba(255,255,255, 0.05);
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05);
         }
 
-        &_link{
+        &_link {
           text-decoration: none;
           height: 100%;
           display: flex;
@@ -63,10 +61,10 @@
     }
   }
 
-  &-profile{
+  &-profile {
     height: 100%;
 
-    &_link{
+    &_link {
       padding: 0 30px;
       height: 100%;
       display: flex;
@@ -76,12 +74,11 @@
       font-size: 16px;
       font-weight: 700;
 
-      &:hover{
-        background-color: rgba(255,255,255, 0.05);
-
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
       }
 
-      .profile-photo{
+      .profile-photo {
         width: 32px;
         height: 32px;
         background-color: #384573;
@@ -92,40 +89,40 @@
   }
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: #292e34;
   border-radius: 10px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
   border-radius: 5px;
 }
-::-webkit-scrollbar:hover{
-  background-color: rgba(0,0,0,.15);
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
-.content{
+.content {
   padding: 15px;
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
 
-  &_title{
+  &_title {
     font-size: 20px;
     font-weight: 700;
   }
 
-  &_body{
+  &_body {
     flex: 1;
     margin: 10px 5px;
     overflow-y: auto;
   }
 }
 
-.footer{
+.footer {
   height: 50px;
   display: flex;
   justify-content: center;
